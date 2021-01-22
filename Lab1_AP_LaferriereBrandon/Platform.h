@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include "GamesArray.h"
 using namespace std;
 class Platform
 {
@@ -9,7 +10,7 @@ private:
 	string m_platName;
 	string m_platManu;
 	int m_size = 5;
-	Games* gamesArr;
+	GamesArray* m_gamesArr[];
 
 public:
 
@@ -18,12 +19,11 @@ public:
 		m_platName = "";
 		m_platManu = "";
 	}
-	Platform(string name, string manufacture)
+	Platform(string name, string manufacture, GamesArray* gamesArr = nullptr)
 	{
 		this->m_platName = name;
 		this->m_platManu = manufacture;
-		this->gamesArr = nullptr;
-
+		m_gamesArr[m_size] = gamesArr;
 	}
 	~Platform()
 	{
@@ -37,6 +37,10 @@ public:
 	string getManu()
 	{
 		return m_platManu;
+	}
+	void setGame(GamesArray* games)
+	{
+		m_gamesArr[6] = games;
 	}
 
 
