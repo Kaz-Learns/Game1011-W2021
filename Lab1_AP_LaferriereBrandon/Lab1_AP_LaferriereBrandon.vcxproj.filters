@@ -21,9 +21,21 @@
     <ClCompile Include="Platform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Achievements.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GamesArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Achievements.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GamesArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

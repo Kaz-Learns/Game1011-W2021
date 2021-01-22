@@ -8,38 +8,40 @@ class Platform
 private:
 	string m_platName;
 	string m_platManu;
-	int m_size = 0;
-	string m_platGames[];
-	
+	int m_size = 5;
+	Games* gamesArr;
+
 public:
-	string getPlatName()
+
+	Platform()
+	{
+		m_platName = "";
+		m_platManu = "";
+	}
+	Platform(string name, string manufacture)
+	{
+		this->m_platName = name;
+		this->m_platManu = manufacture;
+		this->gamesArr = nullptr;
+
+	}
+	~Platform()
+	{
+
+	}
+	// inline functions
+	string getName()
 	{
 		return m_platName;
 	}
-	void setPlatName(string platName)
-	{
-		m_platName = platName;
-	}
-	string getPlatManu()
+	string getManu()
 	{
 		return m_platManu;
 	}
-	void setPlatManu(string platManu)
-	{
-		m_platManu = platManu;
-	}
-	string getPlatGames();
-	{
-		
-	}
-	void setPlatGames(string platGames[])
-	{
-		for (int i = 0; i > m_size; i++)
-		{
-			m_platGames[i] = platGames[i];
-		}
-		
-	}
+
 
 };
+
+
+
 
