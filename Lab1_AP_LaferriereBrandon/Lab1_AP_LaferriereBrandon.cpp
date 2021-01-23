@@ -1,26 +1,41 @@
 #include <iostream>
 #include <string>
 #include "Platform.h"
-using namespace std;
 
 
+
+bool mainLoop = true;
 
 
 int main()
 {
+	if (mainLoop = true)
+	{
+		Platform* platforms = new Platform[4];
+
+		platforms[0].setName("Playstation 5");
+		platforms[0].setManu("Sony");
+
+		platforms[1].setName("Xbox X");
+		platforms[1].setManu("Microsoft");
+
+		platforms[2].setName("Switch");
+		platforms[2].setManu("Nintendo");
+
+		platforms[3].setName("PC");
+		platforms[3].setManu("Various");
+
+		platforms[0].Load();
+		platforms[0].Show();
+		
+		
+	}
+
 	
-	Platform* platforms[4];
-	platforms[0] = new Platform("Playstation 5","Sony", Playstation);
-	platforms[1] = new Platform("Xbox X", "Microsoft");
-	platforms[2] = new Platform("Switch", "Nintendo");
-	platforms[3] = new Platform("PC", "Various");
-
-	platforms[0]->setGame(Playstation);
 	
-
 
 	
 
-
+	return 0;
 }
 

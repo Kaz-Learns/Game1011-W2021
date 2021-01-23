@@ -6,26 +6,20 @@
 
 using namespace std;
 
-class AchievementsArray
+class Achievements
 {
 private:
-	string m_title;
-	string m_discription;
-	int m_score;
+	char m_aTitle[20];
+	char m_aDiscription[20];
+	int score = 0;
+	int size = 5;
+
 
 public:
-	void setTitle(string title)
-	{
-		m_title = title;
-	}
-	void setDiscription(string discription)
-	{
-		m_discription = discription;
-	}
-	void setScore(int score)
-	{
-		m_score = score;
-	}
+	Achievements();
+	/*~Achievements();*/
+	void LoadAchieve();
+	void ShowAchieve();
 
 };
 
