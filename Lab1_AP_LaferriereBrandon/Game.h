@@ -17,7 +17,7 @@ public:
 	Game();
 	~Game();
 	void LoadGame();
-	void ShowGame();
+	void ShowGame()const;
 	
 
 

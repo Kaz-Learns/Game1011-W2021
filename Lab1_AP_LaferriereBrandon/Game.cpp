@@ -1,12 +1,12 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 #include "Game.h"
 
 Game::Game()
 {
-	strcpy_s(m_gName, " ");
-	strcpy_s(m_gPublisher, " ");
-	strcpy_s(m_gDeveloper, " ");
+	strcpy_s(m_gName, " name ");
+	strcpy_s(m_gPublisher, " pub ");
+	strcpy_s(m_gDeveloper, " dev ");
 	m_pAchievement = new Achievements[size];
 }
 
@@ -17,30 +17,32 @@ Game::~Game()
 
 void Game::LoadGame()
 {
-	cout << "\nType name, followed by RETURN or ENTER: ";
+	cout << "\nWrite game name followed by enter: ";
 	cin.getline(m_gName, 20);		// Gets a name; discards newline.
 
-	cout << "\nType phone number, followed by RETURN or ENTER: ";
+	cout << "\nWrite game publisher followed by enter: ";
 	cin.getline(m_gPublisher, 20);	// Gets a phone; discards newline.
 
-	cout << "\nType address, followed by RETURN or ENTER: ";
+	cout << "\nWrite game developer followed by enter: ";
 	cin.getline(m_gDeveloper, 20);
 
 }
 
-void Game::ShowGame()
+void Game::ShowGame() const
 {
 	int i;
 
-	cout <<  m_gName;		
+	cout <<  m_gName;
 	for (i = strlen(m_gName) + 1; i < 20; i++)
 		cout.put(' ');
 
-	cout << m_gPublisher;		// Display phone number.
+	cout <<  m_gPublisher;		// Display phone number.
 	for (i = strlen(m_gPublisher) + 1; i < 20; i++)
 		cout.put(' ');
 
-	cout << m_gDeveloper;			// Display address.
+	cout <<  m_gDeveloper;			// Display address.
+	for (i = strlen(m_gDeveloper) + 1; i < 20; i++)
+		cout.put(' ');
 	cout << '\n';
 }
 

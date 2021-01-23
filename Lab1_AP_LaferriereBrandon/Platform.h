@@ -12,8 +12,9 @@ private:
 	string m_platName;
 	string m_platManu;
 	int size = 5;
-	Game *m_gamesArr;
+	Game* m_gamesArr;
 public:
+	friend class Game;
 	Platform();
 	~Platform();
 	void Load();
